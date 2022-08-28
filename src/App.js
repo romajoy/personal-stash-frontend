@@ -24,7 +24,7 @@ const App = () => {
 
   return(
     <div className='container'>
-      <h1>Welcome to React App</h1>
+      <h1>Welcome to Crafting Stash</h1>
       <button onClick={getYarn}>Show Yarn Stash</button>
       <button onClick={getHook}>Show Hooks Stash</button>
       <div className='row'>
