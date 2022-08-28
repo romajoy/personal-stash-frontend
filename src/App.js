@@ -99,7 +99,7 @@ const App = () => {
    const handleHookDelete = (hookData) => {
     axios.delete(`https://arcane-retreat-34309.herokuapp.com/hooks/${hookData._id}`).then(() => {
       axios.get('https://arcane-retreat-34309.herokuapp.com/hooks').then((res) => {
-        setYarn(res.data)
+        setHook(res.data)
       })
     })
   }
