@@ -3,7 +3,7 @@ const Yarn = (props) => {
     <>
     {props.yarn.map((yarn) => {
         return(
-          <div key={yarn._id} className="row m-0 border" style={{width:"15rem"}}>
+          <div key={yarn._id} className="col m-0 border" style={{width:"15rem"}}>
             <dt>Brand</dt><dd className='m-0'>&emsp;{yarn.brand}</dd>
             <dt>Name</dt><dd className='m-0'>&emsp;{yarn.name}</dd>
             <dt>Yarn Color</dt><dd className='m-0'>&emsp;{yarn.color}</dd>
