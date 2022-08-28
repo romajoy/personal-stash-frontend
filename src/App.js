@@ -118,7 +118,6 @@ const App = () => {
         </>
         : page === "hook" ?
         <>
-        <NewHook/>
         <Hook hook={hook} handleHookDelete={handleHookDelete}/>
         </>
         :null}
