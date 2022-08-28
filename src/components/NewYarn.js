@@ -23,6 +23,10 @@ const NewYarn = (props) => {
             <input className="form-control" type="number" onChange={props.handleYarnYards}/>
         </div>
         <div className="col-md-6">
+            <label className="form-label">Yarn Material</label>
+            <input className="form-control" type="text" onChange={props.handleYarnFiber}/>
+        </div>
+        <div className="col-md-6">
             <label className="form-label">Yarn Weight</label>
             <input className="form-control" type="text" onChange={props.handleYarnWeight}/>
         </div>
@@ -41,6 +45,10 @@ const NewYarn = (props) => {
         <div className="col-md-12">
             <label className="form-label">Notes</label>
             <textarea className="form-control" type="text" onChange={props.handleYarnNote}/>
+        </div>
+        <div className="col-md-12">
+            <label className="form-label">Image URL</label>
+            <textarea className="form-control" type="url" onChange={props.handleYarnImage}/>
         </div>
         <div className="col-12 m-3">
             <input className="btn btn-outline-success" type="submit" value="Add New Yarn"/>
