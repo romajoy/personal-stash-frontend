@@ -56,7 +56,6 @@ const Yarn = (props) => {
                   <div className="col-md-12">
                       <label className="form-label">Yarn Weight</label>
                       <select className="form-select" onChange={props.handleYarnWeight}>
-                          <option >{yarn.weight}</option>
                           <option >Lace</option>
                           <option >Sock, Fingering, Super Fine</option>
                           <option >Sport, Baby</option>
