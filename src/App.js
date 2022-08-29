@@ -18,7 +18,7 @@ const App = () => {
   const [yarnYards,setYarnYards] = useState()
   const [yarnFiber,setYarnFiber] = useState("")
   const [yarnWeight,setYarnWeight] = useState("")
-  const [yarnPurchase,setYarnPurchase] = useState("")
+  const [yarnPurchase,setYarnPurchase] = useState()
   const [yarnSkeins,setYarnSkeins] = useState()
   const [yarnStore,setYarnStore] = useState("")
   const [yarnNote,setYarnNote] = useState("")
@@ -103,6 +103,26 @@ const App = () => {
   } 
   const handleYarnDelete = (yarnData) => {
     axios.delete(`https://arcane-retreat-34309.herokuapp.com/yarn/${yarnData._id}`).then(() => {
+      axios.get('https://arcane-retreat-34309.herokuapp.com/yarn').then((res) => {
+        setYarn(res.data)
+      })
+    })
+  }
+
+  const handleYarnUpdate = (yarnData) => {
+    axios.put(`https://arcane-retreat-34309.herokuapp.com/yarn/${yarnData._id}`, {
+      brand:yarnBrand ? yarnBrand : yarnData.brand,
+      name:yarnName ? yarnName : yarnData.name,
+      color:yarnColor ? yarnColor : yarnData.brand,
+      yards:yarnYards ? yarnYards : yarnData.yards,
+      fiber:yarnFiber ? yarnFiber : yarnData.fiber,
+      weight:yarnWeight ? yarnWeight : yarnData.weight,
+      purchaseDate: yarnPurchase ? yarnPurchase : yarnData.purchaseDate,
+      skeins:yarnSkeins ? yarnSkeins : yarnData.skeins,
+      store:yarnStore ? yarnStore : yarnData.store,
+      note:yarnNote ? yarnNote : yarnData.note,
+      image:yarnImage ? yarnImage : yarnData.image
+    }).then(() => {
       axios.get('https://arcane-retreat-34309.herokuapp.com/yarn').then((res) => {
         setYarn(res.data)
       })
@@ -225,12 +245,13 @@ const App = () => {
         <>
         <NewYarn handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
         handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleNewYarnSubmit={handleNewYarnSubmit}/>
-        <Yarn yarn={yarn} handleYarnDelete={handleYarnDelete}/>
+        <Yarn yarn={yarn} handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
+        handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleYarnDelete={handleYarnDelete} handleYarnUpdate={handleYarnUpdate}/>
         </>
         : page === "hook" ?
         <>
         <NewHook handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleNewHookSubmit={handleNewHookSubmit}/>
-        <Hook hook={hook} handleHookDelete={handleHookDelete} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate}/>
+        <Hook hook={hook} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate} handleHookDelete={handleHookDelete}/>
         </>
         :null}
       </div>
