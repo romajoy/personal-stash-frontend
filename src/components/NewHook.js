@@ -9,7 +9,35 @@ const NewHook = (props) => {
         <div className="row">
         <div className="col-md-6">
             <label className="form-label">Hook/Needle Size</label>
-            <input className="form-control" type="text" onChange={props.handleHookSize}/>
+            <select className="form-select" onChange={props.handleHookSize}>
+                <option>1.5mm / US 0</option>
+                <option>1.75mm / US 0</option>
+                <option>2.0mm / US 0</option>
+                <option>2.25mm / US 1 / B</option>
+                <option>2.5mm</option>
+                <option>2.75mm / US 2 / C</option>
+                <option>3.0mm</option>
+                <option>3.25mm / US 3 / D</option>
+                <option>3.5mm / US 4 / E</option>
+                <option>3.75mm / US 5 / F</option>
+                <option>4.0mm / US 6 / G</option>
+                <option>4.25mm</option>
+                <option>4.5mm / US 7</option>
+                <option>5.0mm / US 8 / H</option>
+                <option>5.5mm / US 9 / I</option>
+                <option>5.75mm</option>
+                <option>6.0mm / US 10 / J</option>
+                <option>6.5mm / US 10.5 / K</option>
+                <option>7.0mm</option>
+                <option>7.5mm</option>
+                <option>8.0mm / US 11 / L</option>
+                <option>9.0mm / US 13 / M</option>
+                <option>10mm / US 15 / N</option>
+                <option>12mm / US 17 / P</option>
+                <option>16mm / US 19 / Q</option>
+                <option>19mm / US 25 / S</option>
+                <option>25mm / US 50 </option>
+            </select>
         </div>
         <div className="col-md-6">
             <label className="form-label">Brand</label>
@@ -29,7 +57,14 @@ const NewHook = (props) => {
         </div>
         <div className="col-md-6">
             <label className="form-label">Needle Style</label>
-            <input className="form-control" type="text" onChange={props.handleHookStyle}/>
+            <select className="form-select" onChange={props.handleHookStyle}>
+                <option ></option>
+                <option >Straight</option>
+                <option >Circular</option>
+                <option>DPN(Double Pointed Needles)</option>
+                <option>Interchangable</option>
+                <option>Cable</option>
+            </select>
         </div>
         <div className="col-md-6">
             <label className="form-label">Needle Length</label>
@@ -37,7 +72,11 @@ const NewHook = (props) => {
         </div>
         <div className="col-md-6">
             <label className="form-label">Needle Point</label>
-            <input className="form-control" type="text" onChange={props.handleHookPoint}/>
+            <select className="form-select" onChange={props.handleHookPoint}>
+                <option ></option>
+                <option >Sharp</option>
+                <option >Dull</option>
+            </select>
         </div>
         <div className="col-md-12">
             <label className="form-label">Image URL</label>

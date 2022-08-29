@@ -28,7 +28,17 @@ const NewYarn = (props) => {
         </div>
         <div className="col-md-6">
             <label className="form-label">Yarn Weight</label>
-            <input className="form-control" type="text" onChange={props.handleYarnWeight}/>
+            <select className="form-select" onChange={props.handleYarnWeight}>
+                <option ></option>
+                <option >Lace</option>
+                <option >Sock, Fingering, Super Fine</option>
+                <option >Sport, Baby</option>
+                <option >DK, Light Worsted</option>
+                <option >Worsted, Aran</option>
+                <option >Chunky, Bulky</option>
+                <option >Super Bulky</option>
+                <option >Jumbo, Roving</option>
+            </select>
         </div>
         <div className="col-md-6">
             <label className="form-label">Date of Purchase</label>
