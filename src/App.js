@@ -110,6 +110,7 @@ const App = () => {
   }
 
   //Functions for Hook/Needle API
+  //Variable for Hook/Needle Form
   const handleHookSize = (event) => {
     setHookSize(event.target.value)
   }
@@ -150,6 +151,7 @@ const App = () => {
     setHookImage(event.target.value)
   }   
 
+  //Function to get data from API
   const getHook = () => {
     axios.get('https://arcane-retreat-34309.herokuapp.com/hooks').then((res) => {
       setHook(res.data)
@@ -157,6 +159,7 @@ const App = () => {
     setPage("hook") 
    }
 
+   //Function for New Hook/Needle Form Submit
    const handleNewHookSubmit = (event) => {
     event.preventDefault()
      axios.post('https://arcane-retreat-34309.herokuapp.com/hooks',{
@@ -180,8 +183,32 @@ const App = () => {
      })
    }
 
+   //Function to Delete Data from API
    const handleHookDelete = (hookData) => {
     axios.delete(`https://arcane-retreat-34309.herokuapp.com/hooks/${hookData._id}`).then(() => {
+      axios.get('https://arcane-retreat-34309.herokuapp.com/hooks').then((res) => {
+        setHook(res.data)
+      })
+    })
+  }
+
+  //Function to Update Entry from API
+  const handleHookUpdate = (hookData) => {
+    axios.put(`https://arcane-retreat-34309.herokuapp.com/hooks/${hookData._id}`, {
+      size: hookSize ? hookSize : hookData.size,
+      brand: hookBrand ? hookBrand : hookData.brand,
+      material: hookMaterial ? hookMaterial : hookData.material,
+      inUse: hookInUse ? hookInUse : hookData.inUse,
+      project: hookProject ? hookProject : hookData.project,
+      notes: hookNotes ? hookNotes : hookData.notes,
+      favorite: hookFavorite ? hookFavorite : hookData.favorite,
+      replace: hookReplace ? hookReplace : hookData.replace,
+      style: hookStyle ? hookStyle : hookData.style,
+      long: hookLong ? hookLong : hookData.long,
+      point: hookPoint ? hookPoint : hookData.point,
+      completeSet: hookComplete ? hookComplete : hookData.completeSet,
+      image: hookImage ? hookImage : hookData.image 
+    }).then(() => {
       axios.get('https://arcane-retreat-34309.herokuapp.com/hooks').then((res) => {
         setHook(res.data)
       })
@@ -203,7 +230,7 @@ const App = () => {
         : page === "hook" ?
         <>
         <NewHook handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleNewHookSubmit={handleNewHookSubmit}/>
-        <Hook hook={hook} handleHookDelete={handleHookDelete}/>
+        <Hook hook={hook} handleHookDelete={handleHookDelete} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate}/>
         </>
         :null}
       </div>

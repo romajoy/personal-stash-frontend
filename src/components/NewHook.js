@@ -8,7 +8,7 @@ const NewHook = (props) => {
       <form className=" mt-3" onSubmit={props.handleNewHookSubmit}>
         <div className="row">
         <div className="col-md-6">
-            <label className="form-label">Hook Size</label>
+            <label className="form-label">Hook/Needle Size</label>
             <input className="form-control" type="text" onChange={props.handleHookSize}/>
         </div>
         <div className="col-md-6">
