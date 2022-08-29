@@ -113,7 +113,7 @@ const App = () => {
     axios.put(`https://arcane-retreat-34309.herokuapp.com/yarn/${yarnData._id}`, {
       brand:yarnBrand ? yarnBrand : yarnData.brand,
       name:yarnName ? yarnName : yarnData.name,
-      color:yarnColor ? yarnColor : yarnData.brand,
+      color:yarnColor ? yarnColor : yarnData.color,
       yards:yarnYards ? yarnYards : yarnData.yards,
       fiber:yarnFiber ? yarnFiber : yarnData.fiber,
       weight:yarnWeight ? yarnWeight : yarnData.weight,
