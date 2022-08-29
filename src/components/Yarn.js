@@ -15,7 +15,7 @@ const Yarn = (props) => {
             <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Purchased At</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
             <dt>Notes</dt><dd className='m-0'>&emsp;{yarn.note}</dd>
-            <dt>Image Url</dt><dd className='m-0'>&emsp;{yarn.image}</dd>
+            <dt>Image Url</dt><dd className='m-0'>{yarn.image}</dd>
             <button className="btn btn-danger" onClick={(event) => {
               props.handleYarnDelete(yarn)
             }}>Delete</button>

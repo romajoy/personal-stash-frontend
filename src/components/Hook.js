@@ -19,7 +19,7 @@ const Hook = (props) => {
               <dt>Needle Length</dt><dd className='m-0'>&emsp;{hook.long}</dd>
               <dt>Needle Point</dt><dd className='m-0'>&emsp;{hook.point}</dd>
               <dt>Set Complete?</dt><dd className='m-0 change-text'>&emsp;{hook.completeSet ? "Complete Set" : "Incomplete Set"}</dd>
-              <dt>Image URL</dt><dd className='m-0'>&emsp;{hook.image}</dd>
+              <dt>Image URL</dt><dd className='m-0'>{hook.image}</dd>
               <button className="btn btn-danger" onClick={(event) => {
               props.handleHookDelete(hook)
             }}>Delete</button>
