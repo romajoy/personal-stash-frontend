@@ -1,3 +1,5 @@
+import moment from "moment"
+
 const Yarn = (props) => {
   return(
     <>
@@ -11,7 +13,7 @@ const Yarn = (props) => {
             <dt>No. of yards</dt><dd className='m-0'>&emsp;{yarn.yards}</dd>
             <dt>Fiber</dt><dd className='m-0'>&emsp;{yarn.fiber}</dd>
             <dt>Yarn Weight</dt><dd className='m-0'>&emsp;{yarn.weight}</dd>
-            <dt>Purchase Date</dt><dd className='m-0'>&emsp;{new Date(yarn.purchaseDate).toDateString()}</dd>
+            <dt>Purchase Date</dt><dd className='m-0'>{moment.utc(yarn.purchaseDate).format("MM/DD/YYYY")}</dd>
             <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Purchased At</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
             <dt>Notes</dt><dd className='m-0'>&emsp;{yarn.note}</dd>
