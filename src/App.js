@@ -23,6 +23,7 @@ const App = () => {
   const [yarnStore,setYarnStore] = useState("")
   const [yarnNote,setYarnNote] = useState("")
   const [yarnImage,setYarnImage] = useState("")
+  const [addYarn, setAddYarn] = useState(false)
 
   //Variables for Hooks/Needles
   const [hook,setHook] = useState([])
@@ -134,6 +135,10 @@ const App = () => {
   const addHooksButton = () => {
      addHooks ? setAddHooks(false) : setAddHooks(true)
   }
+  const addYarnButton = () => {
+    addYarn ? setAddYarn(false) : setAddYarn(true)
+  }
+
 
   //Functions for Hook/Needle API
   //Variable for Hook/Needle Form
@@ -250,10 +255,14 @@ const App = () => {
         {page === "yarn" ?
         <>
         <div>
+          <button className="btn btn-outline-primary" onClick={addYarnButton}>Add New Yarn</button>
+        </div>
+        { addYarn ? 
+        <div>
         <NewYarn handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
         handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleNewYarnSubmit={handleNewYarnSubmit}/>
-        </div>
-        <div>
+        </div> : null }
+        <div className="yarn-cards">
         <Yarn yarn={yarn} handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
         handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleYarnDelete={handleYarnDelete} handleYarnUpdate={handleYarnUpdate}/>
         </div>

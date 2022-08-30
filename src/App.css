@@ -1,5 +1,36 @@
-h1, .change-text{
-  color: red;
+h1 {
+  color: rgb(80, 5, 138);
+}
+
+.btn-outline-primary {
+  background-color: #e4b7e5;
+  color: rgb(31, 2, 43);
+  border: none;
+}
+.btn-outline-primary:hover {
+  background-color: #63458a;
+  color: white;
+  border: none;
+}
+
+.btn-outline-warning {
+  background-color: #b288c0;
+  color:rgb(31, 2, 43);
+  border: none;
+}
+
+.btn-outline-warning:hover {
+  background-color: #9A48d0;
+  color: white;
+  border: none;
+}
+
+.yarn-form {
+  /* width: 50vw; */
+  margin: 2em;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: rgb(242, 232, 248);
 }
 
 .img-div {
@@ -11,6 +42,15 @@ h1, .change-text{
   background-repeat: no-repeat;
 }
 
+.yarn-img-div {
+  height: 400px;
+  width:400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 .card {
   display: flex;
   flex-direction: row;
@@ -20,11 +60,12 @@ h1, .change-text{
   justify-content: space-between;
 }
 
-.content {
+.content, .yarn-content {
   width: 25%;
+  padding: 5px;
 }
 
-.hook-cards {
+.hook-cards, .yarn-cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
