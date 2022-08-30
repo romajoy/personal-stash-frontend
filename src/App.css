@@ -8,9 +8,11 @@ h1 {
   top: 0;
   left:0;
   background-color: white;
-  text-align: center;}
+  text-align: center;
+  padding-bottom: .5em;
+}
 .page-content{
-  margin-top: 5em;
+  margin-top: 6em;
 }
 .addButton{
   display: flex;
