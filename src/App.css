@@ -29,6 +29,17 @@ h1 {
   color: white;
   border: none;
 }
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  background-color: #9A48d0;
+  color: white;
+  box-shadow: 0 0 0 0.2rem #63458a7e
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active{
+background-color: #9A48d0;
+color: white;
+box-shadow: 0 0 0 0.2rem #63458a7a
+}
 
 .btn-outline-warning {
   background-color: #b288c0;
@@ -40,6 +51,18 @@ h1 {
   background-color: #9A48d0;
   color: white;
   border: none;
+}
+
+.btn-outline-warning:focus, .btn-outline-warning.focus {
+    background-color: #9A48d0;
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgb(99, 69, 138,.5)
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled).active,.btn-outline-warning:not(:disabled):not(.disabled):active{
+  background-color: #9A48d0;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgb(99, 69, 138,.5)
 }
 
 .yarn-form {
