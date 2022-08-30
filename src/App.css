@@ -1,3 +1,32 @@
 h1, .change-text{
   color: red;
 }
+
+.img-div {
+  background-image: url(https://shop1024.hstatic.dk/upload_dir/shop/chiaogoo-lace-twist-red.w610.h610.backdrop.jpg);
+  height: 320px;
+  width: 400px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 80vh;
+  margin: 5px;
+  padding: 7px;
+  justify-content: space-between;
+}
+
+.content {
+  width: 25%;
+}
+
+.hook-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
