@@ -5,25 +5,27 @@ const Yarn = (props) => {
     <>
     {props.yarn.map((yarn) => {
         return(
-          <div key={yarn._id} className="card mx-1 mb-1" style={{width:"18rem"}}>
-          <div className="col m-0 card-body" style={{width:"15rem"}}>
+          <div key={yarn._id} className="card">
+            <div className="yarn-img-div" style={{backgroundImage:`url(${yarn.image})`}}>
+              
+            </div>
+          <div className="yarn-content">
             <dt>Brand</dt><dd className='m-0'>&emsp;{yarn.brand}</dd>
             <dt>Name</dt><dd className='m-0'>&emsp;{yarn.name}</dd>
             <dt>Yarn Color</dt><dd className='m-0'>&emsp;{yarn.color}</dd>
             <dt>No. of yards</dt><dd className='m-0'>&emsp;{yarn.yards}</dd>
+            <dt>Notes</dt><dd className='m-0'>&emsp;{yarn.note}</dd>
+            </div><div className="yarn-content">
             <dt>Fiber</dt><dd className='m-0'>&emsp;{yarn.fiber}</dd>
+            <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Yarn Weight</dt><dd className='m-0'>&emsp;{yarn.weight}</dd>
             <dt>Purchase Date</dt><dd className='m-0'>{moment.utc(yarn.purchaseDate).format("MM/DD/YYYY")}</dd>
-            <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Purchased At</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
-            <dt>Notes</dt><dd className='m-0'>&emsp;{yarn.note}</dd>
-            <dt>Image Url</dt><dd className='m-0'>{yarn.image}</dd>
-
+            
 
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={"#exampleModal"+yarn._id}>
               Edit
             </button>
-
 
             <div className="modal fade" id={"exampleModal"+yarn._id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
