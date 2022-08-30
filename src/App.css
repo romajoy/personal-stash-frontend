@@ -1,3 +1,117 @@
-h1, .change-text{
-  color: red;
+h1 {
+  font-family: 'Rampart One', cursive;
+  color: rgb(1, 77, 85);
+  font-size: 3em;
+  padding: 2px;
+}
+.craft-header{
+  width: 100vw;
+  z-index: 1;
+  position:fixed;
+  top: 0;
+  left:0;
+  background-color: white;
+  text-align: center;
+  padding-bottom: .5em;
+}
+.page-content{
+  margin-top: 7em;
+}
+.addButton{
+  display: flex;
+  justify-content: center;
+}
+
+/* .btn-outline-primary {
+  background-color: #48A9A6;
+  color: white;
+  border-color: white;
+}
+.btn-outline-primary:hover {
+  background-color: white;
+  color: #48A9A6;
+  border-color: #48A9A6;
+}
+
+.btn-outline-warning {
+  background-color: #f96e46;
+  color:white;
+  border-color: white;
+}
+
+.btn-outline-warning:hover {
+  background-color: white;
+  color: #f96e46;
+  border-color: #f96e46;
+}
+
+.btn-outline-info {
+  background-color: #fac748 ;
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-info:hover {
+  background-color: white;
+  color: #fac748;
+  border-color:#fac748;
+}
+
+.btn-outline-success {
+  background-color: #f88dad;
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-success:hover {
+  background-color: white;
+  color:#f88dad;
+  border-color: white;
+} */
+
+.yarn-form {
+  /* width: 50vw; */
+  margin: 2em;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: rgb(239, 253, 250);
+}
+
+.img-div {
+  background-image: url(https://shop1024.hstatic.dk/upload_dir/shop/chiaogoo-lace-twist-red.w610.h610.backdrop.jpg);
+  height: 320px;
+  width: 400px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.yarn-img-div {
+  height: 400px;
+  width:400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 80vh;
+  margin: 5px;
+  padding: 7px;
+  justify-content: space-between;
+}
+
+.content, .yarn-content {
+  width: 25%;
+  padding: 5px;
+}
+
+.hook-cards, .yarn-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }

@@ -3,7 +3,7 @@ const NewYarn = (props) => {
     
     return(
       <>
-      <div className="my-3 border">
+      <div className="my-3 border yarn-form">
       <h1>Add Yarn to Stash</h1>
       <form className="row mt-3" onSubmit={props.handleNewYarnSubmit}>
         <div className="col-md-6">
@@ -28,7 +28,17 @@ const NewYarn = (props) => {
         </div>
         <div className="col-md-6">
             <label className="form-label">Yarn Weight</label>
-            <input className="form-control" type="text" onChange={props.handleYarnWeight}/>
+            <select className="form-select" onChange={props.handleYarnWeight}>
+                <option ></option>
+                <option >Lace</option>
+                <option >Sock, Fingering, Super Fine</option>
+                <option >Sport, Baby</option>
+                <option >DK, Light Worsted</option>
+                <option >Worsted, Aran</option>
+                <option >Chunky, Bulky</option>
+                <option >Super Bulky</option>
+                <option >Jumbo, Roving</option>
+            </select>
         </div>
         <div className="col-md-6">
             <label className="form-label">Date of Purchase</label>
@@ -51,7 +61,7 @@ const NewYarn = (props) => {
             <textarea className="form-control" type="url" onChange={props.handleYarnImage}/>
         </div>
         <div className="col-12 m-3">
-            <input className="btn btn-outline-success" type="submit" value="Add New Yarn"/>
+            <input className="btn btn-outline-primary" type="submit" value="Add New Yarn"/>
         </div>
       </form>
       </div>
