@@ -1,5 +1,8 @@
 h1 {
-  color: rgb(80, 5, 138);
+  font-family: 'Rampart One', cursive;
+  color: rgb(1, 77, 85);
+  font-size: 3em;
+  padding: 2px;
 }
 .craft-header{
   width: 100vw;
@@ -12,42 +15,66 @@ h1 {
   padding-bottom: .5em;
 }
 .page-content{
-  margin-top: 6em;
+  margin-top: 7em;
 }
 .addButton{
   display: flex;
   justify-content: center;
 }
 
-.btn-outline-primary {
-  background-color: #e4b7e5;
-  color: rgb(31, 2, 43);
-  border: none;
+/* .btn-outline-primary {
+  background-color: #48A9A6;
+  color: white;
+  border-color: white;
 }
 .btn-outline-primary:hover {
-  background-color: #63458a;
-  color: white;
-  border: none;
+  background-color: white;
+  color: #48A9A6;
+  border-color: #48A9A6;
 }
 
 .btn-outline-warning {
-  background-color: #b288c0;
-  color:rgb(31, 2, 43);
-  border: none;
+  background-color: #f96e46;
+  color:white;
+  border-color: white;
 }
 
 .btn-outline-warning:hover {
-  background-color: #9A48d0;
-  color: white;
-  border: none;
+  background-color: white;
+  color: #f96e46;
+  border-color: #f96e46;
 }
+
+.btn-outline-info {
+  background-color: #fac748 ;
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-info:hover {
+  background-color: white;
+  color: #fac748;
+  border-color:#fac748;
+}
+
+.btn-outline-success {
+  background-color: #f88dad;
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-success:hover {
+  background-color: white;
+  color:#f88dad;
+  border-color: white;
+} */
 
 .yarn-form {
   /* width: 50vw; */
   margin: 2em;
   padding: 2em;
   border-radius: 1em;
-  background-color: rgb(242, 232, 248);
+  background-color: rgb(239, 253, 250);
 }
 
 .img-div {

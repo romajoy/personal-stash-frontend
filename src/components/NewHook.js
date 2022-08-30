@@ -3,7 +3,7 @@ const NewHook = (props) => {
     
     return(
       <>
-      <div className="my-3 border">
+      <div className="my-3 border yarn-form">
       <h1>Add Hook/Needle to Stash</h1>
       <form className=" mt-3" onSubmit={props.handleNewHookSubmit}>
         <div className="row">
