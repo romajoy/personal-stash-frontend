@@ -1,18 +1,14 @@
 const Hook = (props) => {
 
-  const borderColor = () => {
-    const red = Math.floor( Math.random() * 256 );
-    const green = Math.floor( Math.random() * 256 );
-    const blue = Math.floor( Math.random() * 256 );
-    return(`rgb(${red}, ${green}, ${blue})`)
-  }
+
     
     return(
       <>
       {props.hook.map((hook) => {
           return(
-            <div key={hook._id} className="card" style={{border:`3px solid ${borderColor()}`}}> 
-            <div className="img-div"></div>
+            <div key={hook._id} className="card" style={{border:`3px solid ${props.borderColor()}`, backgroundColor:`${props.borderColor()}`}}> 
+            <div className="img-div align-self-center"></div>
+            <div className="yarn-content-div">
             <div  className="content">
              
               <dt>Hook Size</dt><dd className='m-0'>&emsp;{hook.size}</dd>
@@ -21,7 +17,8 @@ const Hook = (props) => {
               <dt>Currently</dt><dd className='m-0 change-text'>&emsp;{hook.inUse ? "In Use" : "Not In Use"}</dd>
               <dt>Project</dt><dd className='m-0'>&emsp;{hook.project}</dd>
               <dt>Notes</dt><dd className='m-0'>&emsp;{hook.notes}</dd>
-              </div> <div className="content">
+              </div> 
+              <div className="content1">
               <dt>Favorite</dt><dd className='m-0 change-text'>&emsp;{hook.favorite ? "Favorite Hook" : "Not Favorite"}</dd>
               <dt>State of Hook</dt><dd className='m-0 change-text'>&emsp;{hook.replace ? "Replace Soon" : "Still in Good Shape"}</dd>
               <dt>Needle Style</dt><dd className='m-0'>&emsp;{hook.style}</dd>
@@ -147,6 +144,7 @@ const Hook = (props) => {
               <button className="btn btn-danger" onClick={(event) => {
               props.handleHookDelete(hook)
             }}>Delete</button>
+              </div>
               </div>
             </div>
           )

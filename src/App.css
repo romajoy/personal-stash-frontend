@@ -1,6 +1,6 @@
 h1 {
   font-family: 'Rampart One', cursive;
-  color: rgb(1, 77, 85);
+  color: rgb(255, 255, 255);
   font-size: 3em;
   padding: 2px;
 }
@@ -13,6 +13,8 @@ h1 {
   background-color: white;
   text-align: center;
   padding-bottom: .5em;
+  border-width: 1em;
+  box-shadow: 0 0 1em rgb(218, 215, 215);
 }
 .page-content{
   margin-top: 7em;
@@ -106,6 +108,7 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   background-image: url(https://shop1024.hstatic.dk/upload_dir/shop/chiaogoo-lace-twist-red.w610.h610.backdrop.jpg);
   height: 320px;
   width: 400px;
+  border-radius: 1em;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,10 +116,11 @@ box-shadow: 0 0 0 0.2rem #63458a7a
 
 .yarn-img-div {
   height: 400px;
-  width:400px;
+  width:300px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 1em;
 }
 
 
@@ -130,8 +134,25 @@ box-shadow: 0 0 0 0.2rem #63458a7a
 }
 
 .content, .yarn-content {
-  width: 25%;
-  padding: 5px;
+  width: 50%;
+  padding: 7px;
+  border-radius: 1em 0 0 1em;
+  background-color: rgba(121, 121, 121, 0.411);
+  color: white;
+}
+
+.yarn-content-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.content1, .yarn-content1 {
+  width: 50%;
+  padding: 7px;
+  border-radius: 0 1em 1em 0;
+  background-color: rgba(121, 121, 121, 0.411);
+  color: white;
 }
 
 .hook-cards, .yarn-cards {
