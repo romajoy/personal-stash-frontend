@@ -61,7 +61,7 @@ const NewYarn = (props) => {
             <textarea className="form-control" type="url" onChange={props.handleYarnImage}/>
         </div>
         <div className="col-12 m-3">
-            <input className="btn btn-outline-success" type="submit" value="Add New Yarn"/>
+            <input className="btn btn-outline-primary" type="submit" value="Add New Yarn"/>
         </div>
       </form>
       </div>
