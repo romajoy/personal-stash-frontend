@@ -39,6 +39,7 @@ const App = () => {
   const [hookPoint,setHookPoint] = useState("")
   const [hookComplete,setHookComplete] = useState(false)
   const [hookImage,setHookImage] = useState("")
+  const [addHooks, setAddHooks] = useState(false)
 
   //Functions for Yarn API
   const handleYarnBrand = (event) => {
@@ -127,6 +128,11 @@ const App = () => {
         setYarn(res.data)
       })
     })
+  }
+
+  // Function to show "Add New Hook" form
+  const addHooksButton = () => {
+     addHooks ? setAddHooks(false) : setAddHooks(true)
   }
 
   //Functions for Hook/Needle API
@@ -236,22 +242,34 @@ const App = () => {
   }
 
   return(
-    <div className='container'>
+    <div className='container-fluid'>
       <h1>Welcome to Crafting Stash</h1>
-      <button onClick={getYarn}>Show Yarn Stash</button>
-      <button onClick={getHook}>Show Hooks Stash</button>
+      <button className='btn btn-outline-info' onClick={getYarn}>Show Yarn Stash</button>
+      <button className='btn btn-outline-warning' onClick={getHook}>Show Hooks Stash</button>
       <div className='row'>
         {page === "yarn" ?
         <>
+        <div>
         <NewYarn handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
         handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleNewYarnSubmit={handleNewYarnSubmit}/>
+        </div>
+        <div>
         <Yarn yarn={yarn} handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
         handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleYarnDelete={handleYarnDelete} handleYarnUpdate={handleYarnUpdate}/>
+        </div>
         </>
         : page === "hook" ?
         <>
+        <div>
+        <button className="btn btn-outline-success" onClick={addHooksButton}>Add New Hook/Needles</button>
+        </div>
+        { addHooks ? 
+        <div>
         <NewHook handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleNewHookSubmit={handleNewHookSubmit}/>
+        </div> : null }
+        <div className="hook-cards">
         <Hook hook={hook} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate} handleHookDelete={handleHookDelete}/>
+        </div>
         </>
         :null}
       </div>
