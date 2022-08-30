@@ -248,14 +248,16 @@ const App = () => {
 
   return(
     <div className='container-fluid'>
+      <div className='craft-header'>
       <h1>Welcome to Crafting Stash</h1>
-      <button className='btn btn-outline-info' onClick={getYarn}>Show Yarn Stash</button>
+      <button className='btn btn-outline-info me-3' onClick={getYarn}>Show Yarn Stash</button>
       <button className='btn btn-outline-warning' onClick={getHook}>Show Hooks Stash</button>
-      <div className='row'>
+      </div>
+      <div className='row page-content'>
         {page === "yarn" ?
         <>
-        <div>
-          <button className="btn btn-outline-primary" onClick={addYarnButton}>Add New Yarn</button>
+        <div className='addButton'>
+          <button className=" mt-3 btn btn-outline-primary" onClick={addYarnButton}>Add New Yarn</button>
         </div>
         { addYarn ? 
         <div>
@@ -269,8 +271,8 @@ const App = () => {
         </>
         : page === "hook" ?
         <>
-        <div>
-        <button className="btn btn-outline-success" onClick={addHooksButton}>Add New Hook/Needles</button>
+        <div className='addButton'>
+        <button className="mt-3 btn btn-outline-success" onClick={addHooksButton}>Add New Hook/Needles</button>
         </div>
         { addHooks ? 
         <div>

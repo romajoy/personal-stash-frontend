@@ -1,6 +1,21 @@
 h1 {
   color: rgb(80, 5, 138);
 }
+.craft-header{
+  width: 100vw;
+  z-index: 1;
+  position:fixed;
+  top: 0;
+  left:0;
+  background-color: white;
+  text-align: center;}
+.page-content{
+  margin-top: 5em;
+}
+.addButton{
+  display: flex;
+  justify-content: center;
+}
 
 .btn-outline-primary {
   background-color: #e4b7e5;

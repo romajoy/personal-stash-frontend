@@ -1,11 +1,17 @@
 const Hook = (props) => {
 
+  const borderColor = () => {
+    const red = Math.floor( Math.random() * 256 );
+    const green = Math.floor( Math.random() * 256 );
+    const blue = Math.floor( Math.random() * 256 );
+    return(`rgb(${red}, ${green}, ${blue})`)
+  }
     
     return(
       <>
       {props.hook.map((hook) => {
           return(
-            <div key={hook._id} className="card"> 
+            <div key={hook._id} className="card" style={{border:`3px solid ${borderColor()}`}}> 
             <div className="img-div"></div>
             <div  className="content">
              
