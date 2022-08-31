@@ -94,6 +94,15 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   background-color: white;
   color:#f88dad;
   border-color: white;
+
+}
+
+.btn-outline-success:focus {
+  background-color: #f88dad;
+  color: white;
+  border-color: white;
+}
+
 } 
 
 .btn-outline-warning:focus, .btn-outline-warning.focus {
@@ -107,6 +116,7 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   color: white;
   box-shadow: 0 0 0 0.2rem rgb(99, 69, 138,.5)
 }
+
 
 
 .yarn-form {
