@@ -101,7 +101,8 @@ const App = () => {
       axios.get('https://arcane-retreat-34309.herokuapp.com/yarn').then((res) => {
         setYarn(res.data)
       })
-    }) 
+    })
+    setAddYarn(false) 
   } 
   const handleYarnDelete = (yarnData) => {
     axios.delete(`https://arcane-retreat-34309.herokuapp.com/yarn/${yarnData._id}`).then(() => {
@@ -212,6 +213,7 @@ const App = () => {
         setHook(res.data)
       })
      })
+     setAddHooks(false)
    }
 
    //Function to Delete Data from API
