@@ -254,7 +254,7 @@ const App = () => {
   }
 
   return(
-    <div className='container-fluid'>
+    <div className='container-fluid body-background'>
       <div className='craft-header' style={{backgroundColor:`${borderColor()}`}}>
       <h1>Welcome to Crafting Stash</h1>
       <button className='btn btn-outline-info me-3' onClick={getYarn}>Show Yarn Stash</button>
