@@ -1,32 +1,29 @@
 import moment from "moment"
 
 const Yarn = (props) => {
-  const borderColor = () => {
-    const red = Math.floor( Math.random() * 256 );
-    const green = Math.floor( Math.random() * 256 );
-    const blue = Math.floor( Math.random() * 256 );
-    return(`rgb(${red}, ${green}, ${blue})`)
-  }
+  
   return(
     <>
     {props.yarn.map((yarn) => {
         return(
-          <div key={yarn._id} className="card" style={{border:`3px solid ${borderColor()}`}}>
+          <div key={yarn._id} className="card" style={{border:`3px solid ${props.borderColor()}`, backgroundColor:`${props.borderColor()}`}}>
             <div className="yarn-img-div" style={{backgroundImage:`url(${yarn.image})`}}>
               
             </div>
+            <div className="yarn-content-div">
           <div className="yarn-content">
             <dt>Brand</dt><dd className='m-0'>&emsp;{yarn.brand}</dd>
             <dt>Name</dt><dd className='m-0'>&emsp;{yarn.name}</dd>
             <dt>Yarn Color</dt><dd className='m-0'>&emsp;{yarn.color}</dd>
             <dt>No. of yards</dt><dd className='m-0'>&emsp;{yarn.yards}</dd>
             <dt>Notes</dt><dd className='m-0'>&emsp;{yarn.note}</dd>
-            </div><div className="yarn-content">
+            </div>
+            <div className="yarn-content1">
             <dt>Fiber</dt><dd className='m-0'>&emsp;{yarn.fiber}</dd>
             <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Yarn Weight</dt><dd className='m-0'>&emsp;{yarn.weight}</dd>
             <dt>Purchase Date</dt><dd className='m-0'>{moment.utc(yarn.purchaseDate).format("MM/DD/YYYY")}</dd>
-            <dt>Purchased At</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
+            <dt>Purchased From</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
             
 
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={"#exampleModal"+yarn._id}>
@@ -108,6 +105,7 @@ const Yarn = (props) => {
             <button className="btn btn-danger" onClick={(event) => {
               props.handleYarnDelete(yarn)
             }}>Delete</button>
+          </div>
           </div>
           </div>
         )

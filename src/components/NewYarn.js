@@ -3,7 +3,7 @@ const NewYarn = (props) => {
     
     return(
       <>
-      <div className="my-3 border yarn-form">
+      <div className="my-3 border yarn-form" style={{backgroundColor:`${props.borderColor()}`}}>
       <h1>Add Yarn to Stash</h1>
       <form className="row mt-3" onSubmit={props.handleNewYarnSubmit}>
         <div className="col-md-6">

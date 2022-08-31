@@ -101,7 +101,8 @@ const App = () => {
       axios.get('https://arcane-retreat-34309.herokuapp.com/yarn').then((res) => {
         setYarn(res.data)
       })
-    }) 
+    })
+    setAddYarn(false) 
   } 
   const handleYarnDelete = (yarnData) => {
     axios.delete(`https://arcane-retreat-34309.herokuapp.com/yarn/${yarnData._id}`).then(() => {
@@ -212,6 +213,7 @@ const App = () => {
         setHook(res.data)
       })
      })
+     setAddHooks(false)
    }
 
    //Function to Delete Data from API
@@ -246,9 +248,16 @@ const App = () => {
     })
   }
 
+  const borderColor = () => {
+    const red = Math.floor( Math.random() * 256 );
+    const green = Math.floor( Math.random() * 256 );
+    const blue = Math.floor( Math.random() * 256 );
+    return(`rgb(${red}, ${green}, ${blue})`)
+  }
+
   return(
-    <div className='container-fluid'>
-      <div className='craft-header'>
+    <div className='container-fluid body-background'>
+      <div className='craft-header' style={{backgroundColor:`${borderColor()}`}}>
       <h1>Welcome to Crafting Stash</h1>
       <button className='btn btn-outline-info me-3' onClick={getYarn}>Show Yarn Stash</button>
       <button className='btn btn-outline-warning' onClick={getHook}>Show Hooks Stash</button>
@@ -262,11 +271,11 @@ const App = () => {
         { addYarn ? 
         <div>
         <NewYarn handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
-        handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleNewYarnSubmit={handleNewYarnSubmit}/>
+        handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleNewYarnSubmit={handleNewYarnSubmit} borderColor={borderColor}/>
         </div> : null }
         <div className="yarn-cards">
         <Yarn yarn={yarn} handleYarnBrand={handleYarnBrand} handleYarnName={handleYarnName} handleYarnColor={handleYarnColor} handleYarnYards={handleYarnYards} handleYarnFiber={handleYarnFiber} handleYarnWeight={handleYarnWeight} handleYarnPurchase={handleYarnPurchase} handleYarnSkeins={handleYarnSkeins} handleYarnStore={handleYarnStore}
-        handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleYarnDelete={handleYarnDelete} handleYarnUpdate={handleYarnUpdate}/>
+        handleYarnNote={handleYarnNote} handleYarnImage={handleYarnImage} handleYarnDelete={handleYarnDelete} handleYarnUpdate={handleYarnUpdate} borderColor={borderColor}/>
         </div>
         </>
         : page === "hook" ?
@@ -276,10 +285,10 @@ const App = () => {
         </div>
         { addHooks ? 
         <div>
-        <NewHook handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleNewHookSubmit={handleNewHookSubmit}/>
+        <NewHook handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleNewHookSubmit={handleNewHookSubmit} borderColor={borderColor}/>
         </div> : null }
         <div className="hook-cards">
-        <Hook hook={hook} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate} handleHookDelete={handleHookDelete}/>
+        <Hook hook={hook} handleHookBrand={handleHookBrand} handleHookSize={handleHookSize} handleHookMaterial={handleHookMaterial} handleHookInUse={handleHookInUse} handleHookProject={handleHookProject} handleHookNotes={handleHookNotes} handleHookFavorite={handleHookFavorite} handleHookReplace={handleHookReplace} handleHookStyle={handleHookStyle} handleHookLong={handleHookLong} handleHookPoint={handleHookPoint} handleHookComplete={handleHookComplete} handleHookImage={handleHookImage} handleHookUpdate={handleHookUpdate} handleHookDelete={handleHookDelete} borderColor={borderColor}/>
         </div>
         </>
         :null}
