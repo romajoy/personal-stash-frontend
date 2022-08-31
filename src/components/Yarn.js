@@ -23,7 +23,7 @@ const Yarn = (props) => {
             <dt>No. of Skeins</dt><dd className='m-0'>&emsp;{yarn.skeins}</dd>
             <dt>Yarn Weight</dt><dd className='m-0'>&emsp;{yarn.weight}</dd>
             <dt>Purchase Date</dt><dd className='m-0'>{moment.utc(yarn.purchaseDate).format("MM/DD/YYYY")}</dd>
-            <dt>Purchased At</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
+            <dt>Purchased From</dt><dd className='m-0'>&emsp;{yarn.store}</dd>
             
 
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={"#exampleModal"+yarn._id}>
