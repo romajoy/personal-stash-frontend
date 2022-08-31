@@ -126,7 +126,9 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.modal-text{
+  color: black;
+}
 .yarn-img-div {
   height: 400px;
   width:50%;
