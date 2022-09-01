@@ -115,7 +115,10 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   box-shadow: 0 0 0 0.2rem rgb(99, 69, 138,.5)
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4deb51d6eb4c58ef03c4051b6020b9cd5f0c3a0e
 .yarn-form {
   /* width: 50vw; */
   margin: 2em;
@@ -133,7 +136,9 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.modal-text{
+  color: black;
+}
 .yarn-img-div {
   height: 400px;
   width:50%;
