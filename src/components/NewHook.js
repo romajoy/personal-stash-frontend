@@ -8,8 +8,9 @@ const NewHook = (props) => {
       <form className=" mt-3" onSubmit={props.handleNewHookSubmit}>
         <div className="row">
         <div className="col-md-6">
-            <label className="form-label">Hook/Needle Size</label>
+            <label className="form-label"></label>
             <select className="form-select" onChange={props.handleHookSize}>
+                <option disabled>Select Hook or Needle Size</option>
                 <option>1.5mm / US 0</option>
                 <option>1.75mm / US 0</option>
                 <option>2.0mm / US 0</option>
@@ -40,25 +41,17 @@ const NewHook = (props) => {
             </select>
         </div>
         <div className="col-md-6">
-            <label className="form-label">Brand</label>
-            <input className="form-control" type="text" onChange={props.handleHookBrand}/>
+            <label className="form-label"></label>
+            <input className="form-control" type="text" onChange={props.handleHookBrand} placeholder="Brand" />
         </div>
         <div className="col-md-6">
-            <label className="form-label">Material</label>
-            <input className="form-control" type="text" onChange={props.handleHookMaterial}/>
+            <label className="form-label"></label>
+            <input className="form-control" type="text" onChange={props.handleHookMaterial} placeholder="Material" />
         </div>
         <div className="col-md-6">
-            <label className="form-label">Project</label>
-            <input className="form-control" type="text" onChange={props.handleHookProject}/>
-        </div>
-        <div className="col-md-6">
-            <label className="form-label">Notes</label>
-            <input className="form-control" type="text" onChange={props.handleHookNotes}/>
-        </div>
-        <div className="col-md-6">
-            <label className="form-label">Needle Style</label>
+            <label className="form-label"></label>
             <select className="form-select" onChange={props.handleHookStyle}>
-                <option ></option>
+                <option disabled>Type of Needles</option>
                 <option >Straight</option>
                 <option >Circular</option>
                 <option>DPN(Double Pointed Needles)</option>
@@ -67,23 +60,18 @@ const NewHook = (props) => {
             </select>
         </div>
         <div className="col-md-6">
-            <label className="form-label">Needle Length</label>
-            <input className="form-control" type="text" onChange={props.handleHookLong}/>
+            <label className="form-label"></label>
+            <input className="form-control" type="text" onChange={props.handleHookLong} placeholder="Needle Length" />
         </div>
         <div className="col-md-6">
-            <label className="form-label">Needle Point</label>
+            <label className="form-label"></label>
             <select className="form-select" onChange={props.handleHookPoint}>
-                <option ></option>
+                <option disabled>Needle Point</option>
                 <option >Sharp</option>
                 <option >Dull</option>
             </select>
         </div>
-        <div className="col-md-12">
-            <label className="form-label">Image URL</label>
-            <input className="form-control" type="url" onChange={props.handleHookImage}/>
-        </div>
-        </div>
-        <div>
+        <div className="col-md-6 mt-4 checkboxes">
         <div className="form-check form-check-inline ms-3">
             <label className="form-check-label">In Use</label>
             <input className="form-check-input" type="checkbox" onChange={props.handleHookInUse}/>
@@ -96,11 +84,23 @@ const NewHook = (props) => {
             <label className="form-check-label">Ready to Replace</label>
             <input className="form-check-input" type="checkbox" onChange={props.handleHookReplace}/>
         </div>
-        <div className="form-check form-check-inline ms-3">
+        <div className="form-check form-check-inline ms-2">
             <label className="form-check-label">Complete Set</label>
             <input className="form-check-input" type="checkbox" onChange={props.handleHookComplete}/>
         </div>
         </div>
+
+        <div className="col-md-6">
+            <label className="form-label"></label>
+            <input className="form-control" type="text" onChange={props.handleHookProject} placeholder="Project you're using hook/needle on" />
+        </div>
+        <div className="col-md-12">
+            <label className="form-label"></label>
+            <textarea className="form-control" type="text" onChange={props.handleHookNotes} placeholder="Notes" />
+        </div>
+        </div>
+
+        
         <div className="col-12 m-3">
             <input className="btn btn-outline-success" type="submit" value="Add New Hook/Needle"/>
         </div>

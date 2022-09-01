@@ -1,7 +1,7 @@
 h1 {
   font-family: 'Rampart One', cursive;
   color: rgb(255, 255, 255);
-  font-size: 3em;
+  font-size: 4em;
   padding: 2px;
 }
 body{
@@ -17,6 +17,17 @@ body{
   overflow: auto;
 }
 
+.yarn-form {
+  padding: 1em;
+}
+
+.checkboxes {
+  background-color: #0101012b;
+  color: white;
+  padding-top: .5em;
+  border-radius: 1em;
+}
+
 .craft-header{
   width: 100vw;
   z-index: 1;
@@ -30,7 +41,7 @@ body{
   box-shadow: 0 0 1em rgb(218, 215, 215);
 }
 .page-content{
-  margin-top: 7em;
+  margin-top: 8em;
 }
 .addButton{
   display: flex;
@@ -83,6 +94,20 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   border-color:#fac748;
 }
 
+.btn-outline-info:focus {
+  background-color: white;
+  color: #fac748;
+  border-color:#fac748;
+}
+
+.yarn-store {
+    
+}
+
+.purchase {
+  margin-left: 5em;
+}
+
 .btn-outline-success {
   background-color: #f88dad;
   color: white;
@@ -94,7 +119,6 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   background-color: white;
   color:#f88dad;
   border-color: white;
-
 }
 
 .btn-outline-success:focus {
@@ -115,6 +139,13 @@ box-shadow: 0 0 0 0.2rem #63458a7a
   color: white;
   box-shadow: 0 0 0 0.2rem rgb(99, 69, 138,.5)
 }
+
+.btn-outline-success:not(:disabled):not(.disabled).active,.btn-outline-success:not(:disabled):not(.disabled):active{
+  background-color:#f88dad;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(245, 244, 246, 0.5)
+}
+
 
 .yarn-form {
   /* width: 50vw; */
