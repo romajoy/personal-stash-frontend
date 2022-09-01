@@ -1,2 +1,28 @@
-# personal-stash-frontend
-Front End of Personal Stash
+# Project 3: Personal Stash
+
+**Joy Houser & Alexis Peves**
+
+## Links to project
+[Back End Link - first model](https://arcane-retreat-34309.herokuapp.com/yarn)
+[Back End Link - second model](https://arcane-retreat-34309.herokuapp.com/hooks)
+[Front End Link](https://desolate-island-81438.herokuapp.com/)
+
+## Approach Taken
+
+We collaborated on ideas and Joy presented a rough idea she had abandoned from her previous project.  Alexis was interested in attempting a more fleshed out version of that concept, so we decided to create an app for a crafter to catalogue their yarn stash and crochet hooks/knitting needles.  
+
+We built a database with two models ('yarn' and 'hooks').  Then we connected that database to our front end through React.  We used Boostrap to style the page, and implemented a "random color" feature that shwos up on the border of the cards, background card color, header and new item forms.  We also impemented modals to edit each item.
+
+
+## Unsolved Problems
+
+We were able to accomplish everything we set out to create.  If we had more time, we likely would have attempted "User Authorization" and log-ins.
+
+
+## User Stories
+
+As a user, you should be able to add new yarn to your 
+
+
+## Notes to Self
+
