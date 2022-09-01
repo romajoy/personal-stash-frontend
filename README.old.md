@@ -21,8 +21,16 @@ We were able to accomplish everything we set out to create.  If we had more time
 
 ## User Stories
 
-As a user, you should be able to add new yarn to your 
+As a user, I can view all the current skeins of yarn in my stash.   
+As a user, I can view all the current crochet hooks and knitting needles I own.   
+As a user, I can log when I use certain crochet hooks/needles in projects, and make a note of which project they're currently being used in.   
+As a user, I can add to my stash when I purchase new yarn, crochet hooks or knitting needles.   
+As a user, I can edit and update quantities, notes and other information about the yarn and hooks/needles in my stash.   
+As a user, I can note when I need to replace my current hooks or needles.   
+As a user, I can keep track of which needles and hooks are my favorite.   
+As a user, I can make note of which sets of DPN's are incomplete.
 
 
 ## Notes to Self
+Joy would like to take some elements from this project and impement it into a more in-depth app focused on just knitting needles, which would also include a user login/auth so that it can be used by multiple people.  
 
