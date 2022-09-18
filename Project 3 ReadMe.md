@@ -3,9 +3,9 @@
 **Joy Houser & Alexis Peves**
 
 ## Links to project
-[Back End Link - first model](https://arcane-retreat-34309.herokuapp.com/yarn)
-[Back End Link - second model](https://arcane-retreat-34309.herokuapp.com/hooks)
-[Front End Link](https://desolate-island-81438.herokuapp.com/)
+[Back End Link - first model](https://arcane-retreat-34309.herokuapp.com/yarn)    
+[Back End Link - second model](https://arcane-retreat-34309.herokuapp.com/hooks)    
+[Front End Link](https://desolate-island-81438.herokuapp.com/)    
 
 ## Approach Taken
 
